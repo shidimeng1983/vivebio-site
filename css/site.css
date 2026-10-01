@@ -442,3 +442,38 @@ a.card:hover {
   .logo .brand-name { font-size: 1.1rem; }
   .logo .slogan { font-size: 0.95rem; }
 }
+
+
+/* Contact QR row */
+.qr-section { margin-top: 2rem; }
+.qr-section .section-head { margin-bottom: 1.2rem; }
+.qr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.qr-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.2rem 1rem 1.15rem;
+  text-align: center;
+}
+.qr-card img {
+  width: min(100%, 200px);
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin: 0 auto 0.85rem;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.45rem;
+}
+.qr-card h3 {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #e8eef7;
+}
+@media (max-width: 700px) {
+  .qr-grid { grid-template-columns: 1fr; max-width: 260px; margin-inline: auto; }
+}
