@@ -238,7 +238,7 @@ code { color: #c9b6ff; font-size: 0.9em; }
   padding: 1.5rem 0;
 }
 .stats-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center;
 }
 .stat strong {
   display: block;
