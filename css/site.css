@@ -299,6 +299,17 @@ a.card:hover {
   color: #fff; display: grid; place-items: end start; padding: 1rem;
   font-weight: 700; font-size: 1.05rem;
   border-bottom: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+.product-card .visual.has-photo {
+  padding: 0;
+  place-items: stretch;
+}
+.product-card .visual.has-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  display: block;
 }
 .product-card .body { padding: 1.2rem 1.3rem 1.4rem; }
 .product-card .body p { margin-bottom: 0.8rem; }
