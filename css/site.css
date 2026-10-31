@@ -555,7 +555,7 @@ a.card:hover {
 
 /* ===== VW-200 free trial (2026-10-31) ===== */
 .trial-strip { padding: 1.4rem 0 0; background: #05060a; }
-.trial-strip a.trial-banner {
+.trial-strip .trial-banner {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;
   padding: 1.15rem 1.4rem; border-radius: 20px; color: #fff;
   background:
@@ -565,7 +565,18 @@ a.card:hover {
   box-shadow: 0 0 34px rgba(138,61,255,0.28), var(--shadow);
   transition: transform .18s ease, box-shadow .18s ease;
 }
-.trial-strip a.trial-banner:hover { transform: translateY(-2px); box-shadow: 0 0 44px rgba(47,211,255,0.32), var(--shadow); color: #fff; }
+.trial-strip a.trial-banner:hover,
+.trial-strip .trial-banner:hover { transform: translateY(-2px); box-shadow: 0 0 44px rgba(47,211,255,0.32), var(--shadow); color: #fff; }
+.trial-banner-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; align-items: center; flex-shrink: 0; }
+.trial-banner-actions .btn { margin: 0; cursor: pointer; }
+.trial-banner-actions .btn-ghost {
+  background: rgba(5,6,10,0.45);
+  border-color: rgba(255,255,255,0.55);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+.trial-banner-actions .btn-ghost:hover { border-color: rgba(47,211,255,0.75); color: #fff; }
+.card-link { margin: 0.55rem 0 0; font-weight: 700; color: #9adfff; }
 .trial-banner .t-badge {
   display: inline-block; margin-right: 0.6rem; padding: 0.2rem 0.65rem; border-radius: 999px;
   background: var(--grad); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.04em; vertical-align: middle;
@@ -616,7 +627,7 @@ a.card:hover {
 }
 
 /* VW-200 试用横幅 v2 实机背景（视觉设计师 2026-10-31） */
-.trial-strip a.trial-banner.trial-banner--photo {
+.trial-strip .trial-banner.trial-banner--photo {
   position: relative; overflow: hidden; isolation: isolate;
   min-height: 95px;
   background-color: #0a0c14;
@@ -634,7 +645,7 @@ a.card:hover {
   color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,0.55);
 }
 @media (max-width: 560px) {
-  .trial-strip a.trial-banner.trial-banner--photo {
+  .trial-strip .trial-banner.trial-banner--photo {
     min-height: 139px;
     flex-direction: column; flex-wrap: nowrap; align-items: flex-start; justify-content: space-between; gap: 0.6rem;
     background-image:
@@ -648,3 +659,48 @@ a.card:hover {
   .trial-banner--photo .t-title { font-size: 1.12rem; line-height: 1.35; white-space: nowrap; }
   .trial-banner--photo .btn { width: auto; padding: 0.7rem 1.4rem; }
 }
+
+@media (max-width: 560px) {
+  .trial-banner-actions { width: 100%; }
+  .trial-banner-actions .btn { flex: 1 1 auto; justify-content: center; }
+}
+
+/* VW-200 intro video modal */
+.video-modal[hidden] { display: none !important; }
+.video-modal {
+  position: fixed; inset: 0; z-index: 1200;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.2rem;
+}
+.video-modal__backdrop {
+  position: absolute; inset: 0; background: rgba(3,5,12,0.78);
+  backdrop-filter: blur(4px);
+}
+.video-modal__dialog {
+  position: relative; z-index: 1; width: min(920px, 100%);
+  background: #0b0e18; border: 1px solid rgba(154,223,255,0.28);
+  border-radius: 18px; box-shadow: 0 24px 80px rgba(0,0,0,0.55);
+  padding: 0.9rem 1rem 1rem; color: #fff;
+}
+.video-modal__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.8rem;
+  margin-bottom: 0.7rem;
+}
+.video-modal__head h2 {
+  margin: 0; font-size: 1.05rem; font-weight: 800; letter-spacing: -0.01em;
+}
+.video-modal__close {
+  appearance: none; border: 0; background: rgba(255,255,255,0.08);
+  color: #fff; width: 2.1rem; height: 2.1rem; border-radius: 999px;
+  font-size: 1.35rem; line-height: 1; cursor: pointer;
+}
+.video-modal__close:hover { background: rgba(47,211,255,0.22); }
+.video-modal video {
+  display: block; width: 100%; border-radius: 12px; background: #000;
+  max-height: min(70vh, 520px);
+}
+body.modal-open { overflow: hidden; }
+
+
+.product-card .card-cta { margin: 0.55rem 0 0; color: #9adfff; font-weight: 700; }
+.product-card:hover .card-cta { text-decoration: underline; }

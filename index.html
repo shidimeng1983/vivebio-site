@@ -39,12 +39,26 @@
   <main>
     <section class="trial-strip" aria-label="VW-200 免费试用">
       <div class="wrap">
-        <a class="trial-banner trial-banner--photo" href="trial.html?src=home">
+        <div class="trial-banner trial-banner--photo">
           <span class="t-title">人手一台的洗片小助手</span>
-          <span class="btn btn-primary">申请试用</span>
-        </a>
+          <div class="trial-banner-actions">
+            <button type="button" class="btn btn-ghost" id="vw200-intro-open" aria-haspopup="dialog">洗片机介绍</button>
+            <a class="btn btn-primary" href="trial.html?src=home">申请试用</a>
+          </div>
+        </div>
       </div>
     </section>
+
+    <div class="video-modal" id="vw200-intro-modal" hidden aria-hidden="true">
+      <div class="video-modal__backdrop" data-close></div>
+      <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="vw200-intro-title">
+        <div class="video-modal__head">
+          <h2 id="vw200-intro-title">Vivedyx VW-200 洗片机介绍</h2>
+          <button type="button" class="video-modal__close" data-close aria-label="关闭">×</button>
+        </div>
+        <video id="vw200-intro-video" controls playsinline preload="metadata" poster="assets/vw200-intro-poster.jpg?v=1031c" src="assets/vw200-intro.mp4?v=1031c"></video>
+      </div>
+    </div>
 
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
@@ -102,12 +116,15 @@
               <p>单色标记与检测配套试剂占位。</p>
             </div>
           </a>
-          <a class="card product-card" href="products.html#workflow">
-            <div class="visual">流程配套</div>
+          <a class="card product-card" href="trial.html?src=home">
+            <div class="visual has-photo">
+              <img src="assets/product-vw200.jpg?v=1031c" alt="Vivedyx VW-200 自动玻片洗涤仪面板" width="1600" height="1000" loading="lazy" />
+            </div>
             <div class="body">
-              <span class="tag">Workflow</span>
-              <h3>剥离 · 淬灭等</h3>
-              <p>抗体剥离、荧光淬灭等流程试剂占位。</p>
+              <span class="tag">Washer</span>
+              <h3>自动玻片洗涤 · Vivedyx VW-200</h3>
+              <p>多色 TSA 每一轮都要反复换液、洗片，这一段可以交给 VW-200。选好程序，按下 START，进液、洗涤、排液就自动完成。适用于 FFPE 切片免疫组化和多色免疫荧光的室温缓冲液洗涤。</p>
+              <p class="card-cta">申请试用 →</p>
             </div>
           </a>
         </div>
@@ -122,7 +139,7 @@
         <div class="grid-4">
           <div class="value-card"><div class="num">01</div><h3>信号放大</h3><p>酪胺酶促局部沉积，便于低丰度靶点检测场景。</p></div>
           <div class="value-card"><div class="num">02</div><h3>多重灵活</h3><p>支持按 panel 设计多轮标记；顺序与剥离需规范操作。</p></div>
-          <div class="value-card"><div class="num">03</div><h3>流程配套</h3><p>试剂盒、染料与剥离 / 淬灭等配套分层可选。</p></div>
+          <div class="value-card"><div class="num">03</div><h3>自动洗涤</h3><p>试剂盒、染料之外，室温洗涤可交给 VW-200。</p></div>
           <div class="value-card"><div class="num">04</div><h3>技术支持</h3><p>完善的技术支持，协助快速、稳定完成多色荧光实验，新手友好。</p></div>
         </div>
       </div>
@@ -170,5 +187,6 @@
     <div class="wrap copy">© 览微生物科技（上海）有限公司 · www.vivebio.cn</div>
   </footer>
   <script src="js/nav.js"></script>
+  <script src="js/video-modal.js"></script>
 </body>
 </html>
