@@ -614,3 +614,37 @@ a.card:hover {
   .trial-form .row-2 { grid-template-columns: 1fr; }
   .trial-banner .btn { width: 100%; }
 }
+
+/* VW-200 试用横幅 v2 实机背景（视觉设计师 2026-10-31） */
+.trial-strip a.trial-banner.trial-banner--photo {
+  position: relative; overflow: hidden; isolation: isolate;
+  min-height: 95px;
+  background-color: #0a0c14;
+  background-image:
+    linear-gradient(90deg, rgba(5,6,10,0.92) 0%, rgba(5,6,10,0.70) 26%, rgba(5,6,10,0.12) 48%, rgba(5,6,10,0) 62%, rgba(5,6,10,0.35) 100%),
+    url("../assets/bg_desktop_2320x190.jpg");
+  background-image:
+    linear-gradient(90deg, rgba(5,6,10,0.92) 0%, rgba(5,6,10,0.70) 26%, rgba(5,6,10,0.12) 48%, rgba(5,6,10,0) 62%, rgba(5,6,10,0.35) 100%),
+    image-set(url("../assets/bg_desktop_2320x190.webp") type("image/webp"), url("../assets/bg_desktop_2320x190.jpg") type("image/jpeg"));
+  background-size: cover; background-position: 60% center; background-repeat: no-repeat;
+  border-color: rgba(154,223,255,0.28);
+}
+.trial-banner--photo .t-title {
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,0.55);
+}
+@media (max-width: 560px) {
+  .trial-strip a.trial-banner.trial-banner--photo {
+    min-height: 139px;
+    flex-direction: column; flex-wrap: nowrap; align-items: flex-start; justify-content: space-between; gap: 0.6rem;
+    background-image:
+      linear-gradient(90deg, rgba(5,6,10,0.90) 0%, rgba(5,6,10,0.62) 42%, rgba(5,6,10,0.05) 70%, rgba(5,6,10,0) 100%),
+      url("../assets/bg_mobile_1074x417.jpg");
+    background-image:
+      linear-gradient(90deg, rgba(5,6,10,0.90) 0%, rgba(5,6,10,0.62) 42%, rgba(5,6,10,0.05) 70%, rgba(5,6,10,0) 100%),
+      image-set(url("../assets/bg_mobile_1074x417.webp") type("image/webp"), url("../assets/bg_mobile_1074x417.jpg") type("image/jpeg"));
+    background-position: center;
+  }
+  .trial-banner--photo .t-title { font-size: 1.12rem; line-height: 1.35; white-space: nowrap; }
+  .trial-banner--photo .btn { width: auto; padding: 0.7rem 1.4rem; }
+}
