@@ -622,10 +622,10 @@ a.card:hover {
   background-color: #0a0c14;
   background-image:
     linear-gradient(90deg, rgba(5,6,10,0.92) 0%, rgba(5,6,10,0.70) 26%, rgba(5,6,10,0.12) 48%, rgba(5,6,10,0) 62%, rgba(5,6,10,0.35) 100%),
-    url("../assets/bg_desktop_2320x190.jpg");
+    url("../assets/bg_desktop_2320x190_v3.jpg?v=1031b");
   background-image:
     linear-gradient(90deg, rgba(5,6,10,0.92) 0%, rgba(5,6,10,0.70) 26%, rgba(5,6,10,0.12) 48%, rgba(5,6,10,0) 62%, rgba(5,6,10,0.35) 100%),
-    image-set(url("../assets/bg_desktop_2320x190.webp") type("image/webp"), url("../assets/bg_desktop_2320x190.jpg") type("image/jpeg"));
+    image-set(url("../assets/bg_desktop_2320x190_v3.webp?v=1031b") type("image/webp"), url("../assets/bg_desktop_2320x190_v3.jpg?v=1031b") type("image/jpeg"));
   background-size: cover; background-position: 60% center; background-repeat: no-repeat;
   border-color: rgba(154,223,255,0.28);
 }
@@ -639,10 +639,10 @@ a.card:hover {
     flex-direction: column; flex-wrap: nowrap; align-items: flex-start; justify-content: space-between; gap: 0.6rem;
     background-image:
       linear-gradient(90deg, rgba(5,6,10,0.90) 0%, rgba(5,6,10,0.62) 42%, rgba(5,6,10,0.05) 70%, rgba(5,6,10,0) 100%),
-      url("../assets/bg_mobile_1074x417.jpg");
+      url("../assets/bg_mobile_1074x417_v3.jpg?v=1031b");
     background-image:
       linear-gradient(90deg, rgba(5,6,10,0.90) 0%, rgba(5,6,10,0.62) 42%, rgba(5,6,10,0.05) 70%, rgba(5,6,10,0) 100%),
-      image-set(url("../assets/bg_mobile_1074x417.webp") type("image/webp"), url("../assets/bg_mobile_1074x417.jpg") type("image/jpeg"));
+      image-set(url("../assets/bg_mobile_1074x417_v3.webp?v=1031b") type("image/webp"), url("../assets/bg_mobile_1074x417_v3.jpg?v=1031b") type("image/jpeg"));
     background-position: center;
   }
   .trial-banner--photo .t-title { font-size: 1.12rem; line-height: 1.35; white-space: nowrap; }
