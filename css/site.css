@@ -551,3 +551,66 @@ a.card:hover {
   .qr-frame { width: 100%; }
   .qr-logo { width: 32px; height: 32px; border-radius: 9px; }
 }
+
+
+/* ===== VW-200 free trial (2026-10-31) ===== */
+.trial-strip { padding: 1.4rem 0 0; background: #05060a; }
+.trial-strip a.trial-banner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1.15rem 1.4rem; border-radius: 20px; color: #fff;
+  background:
+    linear-gradient(120deg, rgba(47,211,255,0.16), rgba(138,61,255,0.24), rgba(229,45,138,0.16)),
+    rgba(12,14,24,0.92);
+  border: 1px solid rgba(138,61,255,0.55);
+  box-shadow: 0 0 34px rgba(138,61,255,0.28), var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.trial-strip a.trial-banner:hover { transform: translateY(-2px); box-shadow: 0 0 44px rgba(47,211,255,0.32), var(--shadow); color: #fff; }
+.trial-banner .t-badge {
+  display: inline-block; margin-right: 0.6rem; padding: 0.2rem 0.65rem; border-radius: 999px;
+  background: var(--grad); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.04em; vertical-align: middle;
+}
+.trial-banner .t-title { font-size: clamp(1.05rem, 2.2vw, 1.35rem); font-weight: 800; letter-spacing: -0.01em; }
+.trial-banner .t-sub { display: block; margin-top: 0.25rem; color: #aebbd0; font-size: 0.9rem; font-weight: 400; }
+.trial-banner .btn { flex-shrink: 0; }
+
+.trial-layout { display: grid; grid-template-columns: 1fr 1.35fr; gap: 1.4rem; align-items: start; }
+.trial-terms ul { margin: 0.4rem 0 0; padding-left: 1.1rem; color: #d7e0ec; }
+.trial-terms li { margin: 0.45rem 0; }
+.trial-terms .quota { margin-top: 1rem; font-weight: 700; color: var(--accent-warm); }
+.trial-terms .demo-line { margin: 0.4rem 0 0; color: #9adfff; font-size: 0.9rem; }
+.trial-form .field { margin-bottom: 1rem; }
+.trial-form label.lbl { display: block; margin-bottom: 0.35rem; font-weight: 600; font-size: 0.92rem; }
+.trial-form .req { color: var(--magenta); margin-left: 0.15rem; }
+.trial-form input[type=text], .trial-form input[type=email], .trial-form input[type=tel], .trial-form textarea, .trial-form select {
+  width: 100%; padding: 0.75rem 0.9rem; border-radius: 12px; font: inherit; font-size: 16px;
+  color: var(--ink); background: rgba(255,255,255,0.05); border: 1px solid var(--line);
+}
+.trial-form input:focus, .trial-form textarea:focus, .trial-form select:focus { outline: none; border-color: rgba(47,211,255,0.6); box-shadow: 0 0 0 3px rgba(47,211,255,0.15); }
+.trial-form select option { color: #111; }
+.trial-form .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+.trial-form .checks { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; }
+.trial-form .checks label, .trial-form .consent { display: inline-flex; align-items: flex-start; gap: 0.45rem; color: #d7e0ec; font-size: 0.93rem; cursor: pointer; }
+.trial-form .consent { margin: 0.4rem 0 1.1rem; }
+.trial-form input[type=checkbox] { width: 1.05rem; height: 1.05rem; margin-top: 0.2rem; accent-color: #8a3dff; }
+.trial-form .hint { color: #7f8ea3; font-size: 0.8rem; margin-top: 0.3rem; }
+.trial-form .err { color: #ff8fc3; font-size: 0.85rem; margin-top: 0.3rem; display: none; }
+.trial-form .field.invalid .err { display: block; }
+.trial-form .field.invalid input, .trial-form .field.invalid textarea { border-color: rgba(229,45,138,0.7); }
+.trial-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.trial-form button[disabled] { opacity: 0.6; cursor: wait; }
+.trial-result { display: none; margin-top: 1rem; }
+.trial-result.show { display: block; }
+.trial-result.ok { border-left-color: #3ee0a1; background: rgba(62,224,161,0.08); }
+.trial-result.fail { border-left-color: var(--magenta); background: rgba(229,45,138,0.08); }
+.trial-result .fb-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 0.8rem; }
+.trial-result .fb-row img { width: 120px; height: 120px; border-radius: 10px; background: #fff; padding: 6px; }
+.trial-result .fb-actions { display: flex; flex-direction: column; gap: 0.5rem; }
+.trial-result .btn { padding: 0.6rem 1rem; font-size: 0.88rem; }
+@media (max-width: 900px) {
+  .trial-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .trial-form .row-2 { grid-template-columns: 1fr; }
+  .trial-banner .btn { width: 100%; }
+}
